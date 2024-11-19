@@ -1,0 +1,23 @@
+[0.023s] Invoking command in '/home/athens/ros2_athens_ws/build/first_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/athens/ros2_athens_ws/install/first_package:/home/athens/ros2_ws/install/stm_visualization_node:/home/athens/ros2_ws/install/stm_setup:/home/athens/ros2_ws/install/stm_serial_node:/home/athens/ros2_ws/install/stm_control_node:/opt/ros/foxy /usr/bin/cmake /home/athens/ros2_athens_ws/src/first_interfaces -DCMAKE_INSTALL_PREFIX=/home/athens/ros2_athens_ws/install/first_interfaces
+[0.064s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.098s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.401s] CMake Error at CMakeLists.txt:20 (find_package):
+[0.401s]   By not providing "Findstd-msgs.cmake" in CMAKE_MODULE_PATH this project has
+[0.402s]   asked CMake to find a package configuration file provided by "std-msgs",
+[0.403s]   but CMake did not find one.
+[0.403s] 
+[0.404s]   Could not find a package configuration file provided by "std-msgs" with any
+[0.405s]   of the following names:
+[0.405s] 
+[0.406s]     std-msgsConfig.cmake
+[0.406s]     std-msgs-config.cmake
+[0.406s] 
+[0.407s]   Add the installation prefix of "std-msgs" to CMAKE_PREFIX_PATH or set
+[0.407s]   "std-msgs_DIR" to a directory containing one of the above files.  If
+[0.408s]   "std-msgs" provides a separate development package or SDK, be sure it has
+[0.408s]   been installed.
+[0.408s] 
+[0.409s] 
+[0.410s] -- Configuring incomplete, errors occurred!
+[0.410s] See also "/home/athens/ros2_athens_ws/build/first_interfaces/CMakeFiles/CMakeOutput.log".
+[0.425s] Invoked command in '/home/athens/ros2_athens_ws/build/first_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/athens/ros2_athens_ws/install/first_package:/home/athens/ros2_ws/install/stm_visualization_node:/home/athens/ros2_ws/install/stm_setup:/home/athens/ros2_ws/install/stm_serial_node:/home/athens/ros2_ws/install/stm_control_node:/opt/ros/foxy /usr/bin/cmake /home/athens/ros2_athens_ws/src/first_interfaces -DCMAKE_INSTALL_PREFIX=/home/athens/ros2_athens_ws/install/first_interfaces
