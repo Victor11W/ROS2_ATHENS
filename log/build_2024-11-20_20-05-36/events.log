@@ -1,0 +1,115 @@
+[0.000000] (-) TimerEvent: {}
+[0.000245] (first_package) JobQueued: {'identifier': 'first_package', 'dependencies': OrderedDict()}
+[0.000660] (stm_station) JobQueued: {'identifier': 'stm_station', 'dependencies': OrderedDict()}
+[0.000684] (first_package) JobStarted: {'identifier': 'first_package'}
+[0.114395] (-) TimerEvent: {}
+[0.218513] (-) TimerEvent: {}
+[0.320461] (-) TimerEvent: {}
+[0.426135] (-) TimerEvent: {}
+[0.547978] (-) TimerEvent: {}
+[0.668848] (-) TimerEvent: {}
+[0.788532] (-) TimerEvent: {}
+[0.896830] (-) TimerEvent: {}
+[0.997944] (-) TimerEvent: {}
+[1.102873] (-) TimerEvent: {}
+[1.206896] (-) TimerEvent: {}
+[1.317547] (-) TimerEvent: {}
+[1.419958] (-) TimerEvent: {}
+[1.525871] (-) TimerEvent: {}
+[1.626724] (-) TimerEvent: {}
+[1.728017] (-) TimerEvent: {}
+[1.840095] (-) TimerEvent: {}
+[1.943204] (-) TimerEvent: {}
+[2.045139] (-) TimerEvent: {}
+[2.146171] (-) TimerEvent: {}
+[2.260650] (-) TimerEvent: {}
+[2.361373] (-) TimerEvent: {}
+[2.447685] (first_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/first_package', 'build', '--build-base', '/home/athens/ros2_athens_ws/build/first_package/build', 'install', '--record', '/home/athens/ros2_athens_ws/build/first_package/install.log', '--install-scripts', '$base/lib/first_package', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/athens/ros2_athens_ws/src/first_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'athens', 'LC_TIME': 'es_ES.UTF-8', 'SSH_AGENT_PID': '1201', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/athens/ros2_ws/install/turtlesim/lib:/home/athens/ros2_ws/install/stm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/athens', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/athens', 'TERM_PROGRAM_VERSION': '1.95.3', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'es_ES.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1106', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/athens/ros2_athens_ws/install:/home/athens/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'athens', 'JOURNAL_STREAM': '8:35336', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'athens', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/athens/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ROSCourseAthens:@/tmp/.ICE-unix/1236,unix/ROSCourseAthens:/tmp/.ICE-unix/1236', 'INVOCATION_ID': '4b11a3d885f6420e916dc81de2cfeddb', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_ES.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0b04e83f_85a8_49eb_8843_41173dad3f95', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'LC_TELEPHONE': 'es_ES.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-8ae00bb182.sock', 'GNOME_TERMINAL_SERVICE': ':1.69', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '11', 'AMENT_PREFIX_PATH': '/home/athens/ros2_athens_ws/install/first_package:/home/athens/ros2_ws/install/turtlesim:/home/athens/ros2_ws/install/stm_visualization_node:/home/athens/ros2_ws/install/stm_setup:/home/athens/ros2_ws/install/stm_serial_node:/home/athens/ros2_ws/install/stm_interfaces:/home/athens/ros2_ws/install/stm_control_node:/opt/ros/foxy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'LC_NAME': 'es_ES.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/athens/ros2_athens_ws/build/first_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/athens/ros2_athens_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/athens/ros2_athens_ws/install/first_package/lib/python3.8/site-packages:/home/athens/ros2_athens_ws/install/first_package/lib/python3.8/site-packages:/home/athens/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_visualization_node/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_setup/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_serial_node/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_interfaces/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_control_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'es_ES.UTF-8', 'LC_PAPER': 'es_ES.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/athens/ros2_ws/install/turtlesim:/home/athens/ros2_ws/install/stm_interfaces'}, 'shell': False}
+[2.472076] (-) TimerEvent: {}
+[2.579575] (-) TimerEvent: {}
+[2.686930] (-) TimerEvent: {}
+[2.794910] (-) TimerEvent: {}
+[2.878580] (first_package) StdoutLine: {'line': b'running egg_info\n'}
+[2.881197] (first_package) StdoutLine: {'line': b'writing ../../build/first_package/first_package.egg-info/PKG-INFO\n'}
+[2.883071] (first_package) StdoutLine: {'line': b'writing dependency_links to ../../build/first_package/first_package.egg-info/dependency_links.txt\n'}
+[2.884751] (first_package) StdoutLine: {'line': b'writing entry points to ../../build/first_package/first_package.egg-info/entry_points.txt\n'}
+[2.885877] (first_package) StdoutLine: {'line': b'writing requirements to ../../build/first_package/first_package.egg-info/requires.txt\n'}
+[2.886850] (first_package) StdoutLine: {'line': b'writing top-level names to ../../build/first_package/first_package.egg-info/top_level.txt\n'}
+[2.895448] (-) TimerEvent: {}
+[2.954142] (first_package) StdoutLine: {'line': b"reading manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'\n"}
+[2.958519] (first_package) StdoutLine: {'line': b"writing manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'\n"}
+[2.959939] (first_package) StdoutLine: {'line': b'running build\n'}
+[2.960879] (first_package) StdoutLine: {'line': b'running build_py\n'}
+[2.967811] (first_package) StdoutLine: {'line': b'running install\n'}
+[2.969196] (first_package) StdoutLine: {'line': b'running install_lib\n'}
+[2.973275] (first_package) StdoutLine: {'line': b'running install_data\n'}
+[2.975284] (first_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.979351] (first_package) StdoutLine: {'line': b"removing '/home/athens/ros2_athens_ws/install/first_package/lib/python3.8/site-packages/first_package-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[3.007989] (-) TimerEvent: {}
+[3.015590] (first_package) StdoutLine: {'line': b'Copying ../../build/first_package/first_package.egg-info to /home/athens/ros2_athens_ws/install/first_package/lib/python3.8/site-packages/first_package-0.0.0-py3.8.egg-info\n'}
+[3.022011] (first_package) StdoutLine: {'line': b'running install_scripts\n'}
+[3.106136] (first_package) StdoutLine: {'line': b'Installing simple_publisher_node script to /home/athens/ros2_athens_ws/install/first_package/lib/first_package\n'}
+[3.109352] (-) TimerEvent: {}
+[3.111519] (first_package) StdoutLine: {'line': b'Installing simple_pubsub_node script to /home/athens/ros2_athens_ws/install/first_package/lib/first_package\n'}
+[3.112805] (first_package) StdoutLine: {'line': b'Installing simple_subscriber_node script to /home/athens/ros2_athens_ws/install/first_package/lib/first_package\n'}
+[3.113946] (first_package) StdoutLine: {'line': b'Installing test_simple_pubsub_node script to /home/athens/ros2_athens_ws/install/first_package/lib/first_package\n'}
+[3.116958] (first_package) StdoutLine: {'line': b"writing list of installed files to '/home/athens/ros2_athens_ws/build/first_package/install.log'\n"}
+[3.174150] (first_package) CommandEnded: {'returncode': 0}
+[3.210501] (-) TimerEvent: {}
+[3.253279] (first_package) JobEnded: {'identifier': 'first_package', 'rc': 0}
+[3.258164] (stm_station) JobStarted: {'identifier': 'stm_station'}
+[3.313552] (-) TimerEvent: {}
+[3.418666] (-) TimerEvent: {}
+[3.531597] (-) TimerEvent: {}
+[3.632405] (-) TimerEvent: {}
+[3.739911] (-) TimerEvent: {}
+[3.847510] (-) TimerEvent: {}
+[3.953210] (-) TimerEvent: {}
+[4.063380] (-) TimerEvent: {}
+[4.167062] (-) TimerEvent: {}
+[4.273299] (-) TimerEvent: {}
+[4.379955] (-) TimerEvent: {}
+[4.450035] (stm_station) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/stm_station', 'build', '--build-base', '/home/athens/ros2_athens_ws/build/stm_station/build', 'install', '--record', '/home/athens/ros2_athens_ws/build/stm_station/install.log', '--install-scripts', '$base/lib/stm_station', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/athens/ros2_athens_ws/src/stm_station', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'athens', 'LC_TIME': 'es_ES.UTF-8', 'SSH_AGENT_PID': '1201', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/athens/ros2_ws/install/turtlesim/lib:/home/athens/ros2_ws/install/stm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/athens', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/athens', 'TERM_PROGRAM_VERSION': '1.95.3', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'es_ES.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1106', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/athens/ros2_athens_ws/install:/home/athens/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'athens', 'JOURNAL_STREAM': '8:35336', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'athens', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/athens/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ROSCourseAthens:@/tmp/.ICE-unix/1236,unix/ROSCourseAthens:/tmp/.ICE-unix/1236', 'INVOCATION_ID': '4b11a3d885f6420e916dc81de2cfeddb', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_ES.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0b04e83f_85a8_49eb_8843_41173dad3f95', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'LC_TELEPHONE': 'es_ES.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-8ae00bb182.sock', 'GNOME_TERMINAL_SERVICE': ':1.69', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '11', 'AMENT_PREFIX_PATH': '/home/athens/ros2_athens_ws/install/first_package:/home/athens/ros2_ws/install/turtlesim:/home/athens/ros2_ws/install/stm_visualization_node:/home/athens/ros2_ws/install/stm_setup:/home/athens/ros2_ws/install/stm_serial_node:/home/athens/ros2_ws/install/stm_interfaces:/home/athens/ros2_ws/install/stm_control_node:/opt/ros/foxy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'LC_NAME': 'es_ES.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/athens/ros2_athens_ws/build/stm_station', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/athens/ros2_athens_ws/build/stm_station/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages:/home/athens/ros2_athens_ws/install/first_package/lib/python3.8/site-packages:/home/athens/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_visualization_node/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_setup/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_serial_node/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_interfaces/lib/python3.8/site-packages:/home/athens/ros2_ws/install/stm_control_node/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'es_ES.UTF-8', 'LC_PAPER': 'es_ES.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/athens/ros2_ws/install/turtlesim:/home/athens/ros2_ws/install/stm_interfaces'}, 'shell': False}
+[4.487090] (-) TimerEvent: {}
+[4.593935] (-) TimerEvent: {}
+[4.699563] (-) TimerEvent: {}
+[4.731906] (stm_station) StdoutLine: {'line': b'running egg_info\n'}
+[4.733178] (stm_station) StdoutLine: {'line': b'creating ../../build/stm_station/stm_station.egg-info\n'}
+[4.734218] (stm_station) StdoutLine: {'line': b'writing ../../build/stm_station/stm_station.egg-info/PKG-INFO\n'}
+[4.735039] (stm_station) StdoutLine: {'line': b'writing dependency_links to ../../build/stm_station/stm_station.egg-info/dependency_links.txt\n'}
+[4.735542] (stm_station) StdoutLine: {'line': b'writing entry points to ../../build/stm_station/stm_station.egg-info/entry_points.txt\n'}
+[4.735953] (stm_station) StdoutLine: {'line': b'writing requirements to ../../build/stm_station/stm_station.egg-info/requires.txt\n'}
+[4.736264] (stm_station) StdoutLine: {'line': b'writing top-level names to ../../build/stm_station/stm_station.egg-info/top_level.txt\n'}
+[4.737683] (stm_station) StdoutLine: {'line': b"writing manifest file '../../build/stm_station/stm_station.egg-info/SOURCES.txt'\n"}
+[4.784429] (stm_station) StdoutLine: {'line': b"reading manifest file '../../build/stm_station/stm_station.egg-info/SOURCES.txt'\n"}
+[4.786765] (stm_station) StdoutLine: {'line': b"writing manifest file '../../build/stm_station/stm_station.egg-info/SOURCES.txt'\n"}
+[4.788246] (stm_station) StdoutLine: {'line': b'running build\n'}
+[4.788435] (stm_station) StdoutLine: {'line': b'running build_py\n'}
+[4.788742] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/build/stm_station/build\n'}
+[4.789076] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/build/stm_station/build/lib\n'}
+[4.789321] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station\n'}
+[4.789579] (stm_station) StdoutLine: {'line': b'copying stm_station/4_stm_serial_node_pub.py -> /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station\n'}
+[4.791121] (stm_station) StdoutLine: {'line': b'copying stm_station/__init__.py -> /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station\n'}
+[4.791541] (stm_station) StdoutLine: {'line': b'running install\n'}
+[4.792598] (stm_station) StdoutLine: {'line': b'running install_lib\n'}
+[4.793711] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station\n'}
+[4.794089] (stm_station) StdoutLine: {'line': b'copying /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station/4_stm_serial_node_pub.py -> /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station\n'}
+[4.794777] (stm_station) StdoutLine: {'line': b'copying /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station/__init__.py -> /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station\n'}
+[4.795725] (stm_station) StdoutLine: {'line': b'byte-compiling /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station/4_stm_serial_node_pub.py to 4_stm_serial_node_pub.cpython-38.pyc\n'}
+[4.798316] (stm_station) StdoutLine: {'line': b'byte-compiling /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station/__init__.py to __init__.cpython-38.pyc\n'}
+[4.799123] (stm_station) StdoutLine: {'line': b'running install_data\n'}
+[4.799327] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/install/stm_station/share/ament_index\n'}
+[4.799467] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/install/stm_station/share/ament_index/resource_index\n'}
+[4.799592] (stm_station) StdoutLine: {'line': b'creating /home/athens/ros2_athens_ws/install/stm_station/share/ament_index/resource_index/packages\n'}
+[4.799650] (-) TimerEvent: {}
+[4.801812] (stm_station) StdoutLine: {'line': b'copying resource/stm_station -> /home/athens/ros2_athens_ws/install/stm_station/share/ament_index/resource_index/packages\n'}
+[4.802121] (stm_station) StdoutLine: {'line': b'copying package.xml -> /home/athens/ros2_athens_ws/install/stm_station/share/stm_station\n'}
+[4.802321] (stm_station) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.804396] (stm_station) StdoutLine: {'line': b'Copying ../../build/stm_station/stm_station.egg-info to /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station-0.0.0-py3.8.egg-info\n'}
+[4.810155] (stm_station) StdoutLine: {'line': b'running install_scripts\n'}
+[4.857231] (stm_station) StdoutLine: {'line': b'Installing 4_stm_serial_node_pub script to /home/athens/ros2_athens_ws/install/stm_station/lib/stm_station\n'}
+[4.858503] (stm_station) StdoutLine: {'line': b"writing list of installed files to '/home/athens/ros2_athens_ws/build/stm_station/install.log'\n"}
+[4.893457] (stm_station) CommandEnded: {'returncode': 0}
+[4.903256] (-) TimerEvent: {}
+[4.904267] (stm_station) JobEnded: {'identifier': 'stm_station', 'rc': 0}
+[4.905814] (-) EventReactorShutdown: {}

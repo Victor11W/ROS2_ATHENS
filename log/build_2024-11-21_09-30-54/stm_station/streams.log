@@ -1,0 +1,24 @@
+[0.695s] Invoking command in '/home/athens/ros2_athens_ws/src/stm_station': PYTHONPATH=/home/athens/ros2_athens_ws/build/stm_station/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/stm_station build --build-base /home/athens/ros2_athens_ws/build/stm_station/build install --record /home/athens/ros2_athens_ws/build/stm_station/install.log --install-scripts $base/lib/stm_station --single-version-externally-managed install_data
+[0.927s] running egg_info
+[0.928s] writing ../../build/stm_station/stm_station.egg-info/PKG-INFO
+[0.940s] writing dependency_links to ../../build/stm_station/stm_station.egg-info/dependency_links.txt
+[0.941s] writing entry points to ../../build/stm_station/stm_station.egg-info/entry_points.txt
+[0.942s] writing requirements to ../../build/stm_station/stm_station.egg-info/requires.txt
+[0.942s] writing top-level names to ../../build/stm_station/stm_station.egg-info/top_level.txt
+[0.982s] reading manifest file '../../build/stm_station/stm_station.egg-info/SOURCES.txt'
+[0.984s] writing manifest file '../../build/stm_station/stm_station.egg-info/SOURCES.txt'
+[0.986s] running build
+[0.986s] running build_py
+[0.989s] copying stm_station/4_stm_serial_node_pub.py -> /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station
+[0.989s] running install
+[0.990s] running install_lib
+[0.992s] copying /home/athens/ros2_athens_ws/build/stm_station/build/lib/stm_station/4_stm_serial_node_pub.py -> /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station
+[0.993s] byte-compiling /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station/4_stm_serial_node_pub.py to 4_stm_serial_node_pub.cpython-38.pyc
+[0.996s] running install_data
+[0.998s] running install_egg_info
+[0.999s] removing '/home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station-0.0.0-py3.8.egg-info' (and everything under it)
+[1.015s] Copying ../../build/stm_station/stm_station.egg-info to /home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station-0.0.0-py3.8.egg-info
+[1.024s] running install_scripts
+[1.039s] Installing 4_stm_serial_node_pub script to /home/athens/ros2_athens_ws/install/stm_station/lib/stm_station
+[1.041s] writing list of installed files to '/home/athens/ros2_athens_ws/build/stm_station/install.log'
+[1.081s] Invoked command in '/home/athens/ros2_athens_ws/src/stm_station' returned '0': PYTHONPATH=/home/athens/ros2_athens_ws/build/stm_station/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/stm_station build --build-base /home/athens/ros2_athens_ws/build/stm_station/build install --record /home/athens/ros2_athens_ws/build/stm_station/install.log --install-scripts $base/lib/stm_station --single-version-externally-managed install_data
