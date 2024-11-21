@@ -4,9 +4,9 @@
 
 # 1. Import necessary libraries
 import rclpy
-from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray  # Standard message type for arrays
+from rclpy.node import Node # Standard message type for arrays
 import serial
+from stm_interfaces.msg import STMState
 
 # 2. Define the SerialPublisherNode class
 class SerialPublisherNode(Node):
@@ -76,13 +76,21 @@ class SerialPublisherNode(Node):
 
                     # Create a Float32MultiArray message
                     # TODO: Create and populate the Float32MultiArray message
-                    float32_multi_array_msg = Float32MultiArray()
-                    float32_multi_array_msg.data = [float(i) for i in float_values] #rajout
+                    STM_state_msg = STMState()
+                    STM_state_msg.motor_encoder = float(float_values[0])
+                    STM_state_msg.motor_velocity = float(float_values[1])
+                    STM_state_msg.accel_x = float(float_values[2])
+                    STM_state_msg.accel_y = float(float_values[3])
+                    STM_state_msg.accel_z = float(float_values[4])
+                    STM_state_msg.gyro_x = float(float_values[5])
+                    STM_state_msg.gyro_y = float(float_values[6])
+                    STM_state_msg.gyro_z = float(float_values[7])
+
 
                     # Publish the message
                     # TODO: Publish the float32_multi_array_msg
-                    self.publisher_=self.create_publisher(Float32MultiArray,'/stm_control',10)
-                    self.publisher_.publish(float32_multi_array_msg) #rajout
+                    self.publisher_=self.create_publisher(STMState,'/stm_control',10)
+                    self.publisher_.publish(STM_state_msg) #rajout
 
                 self.get_logger().info(f'Published data: {float_values}')
             except ValueError as e:

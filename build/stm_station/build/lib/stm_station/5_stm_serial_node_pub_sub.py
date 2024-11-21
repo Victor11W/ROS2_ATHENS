@@ -6,8 +6,10 @@
 # 1. Import necessary libraries
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray
+from stm_interfaces.msg import STMControl
+from stm_interfaces.msg import STMState
 import serial
+
 
 # 2. Define the SerialPubSubNode class
 class SerialPubSubNode(Node):
@@ -41,11 +43,10 @@ class SerialPubSubNode(Node):
 
 
         self.subscription = self.create_subscription(
-            Float32MultiArray,             # Message type used by the publisher
+            STMControl,             # Message type used by the publisher
             self.stm_control_topic,  # <-- Replace 'NICKNAME' with the specific topic name for your group
             self.stm_control_callback,  
             10)  # Queue size for incoming messages
-        self.subscription  # Prevent unused variable warning
 
 
 
@@ -91,13 +92,22 @@ class SerialPubSubNode(Node):
 
                     # Create a Float32MultiArray message
                     # TODO: Create and populate the Float32MultiArray message
-                    float32_multi_array_msg = Float32MultiArray()
-                    float32_multi_array_msg.data = [float(i) for i in float_values]
+                    STM_state_msg = STMState()
+                    STM_state_msg.motor_encoder = float(float_values[0])
+                    STM_state_msg.motor_velocity = float(float_values[1])
+                    STM_state_msg.accel_x = float(float_values[2])
+                    STM_state_msg.accel_y = float(float_values[3])
+                    STM_state_msg.accel_z = float(float_values[4])
+                    STM_state_msg.gyro_x = float(float_values[5])
+                    STM_state_msg.gyro_y = float(float_values[6])
+                    STM_state_msg.gyro_z = float(float_values[7])
+
+
 
                     # Publish the message
-                    # TODO: Publish the float32_multi_array_msg
-                    self.publisher_=self.create_publisher(Float32MultiArray,self.stm_state_topic,10)
-                    self.publisher_.publish(float32_multi_array_msg) #rajout
+                    # TODO: Publish the STM_state_msg
+                    self.publisher_=self.create_publisher(STMState,self.stm_state_topic,10)
+                    self.publisher_.publish(STM_state_msg) #rajout
                     
 
                 self.get_logger().info(f'Published data: {float_values}')
@@ -106,7 +116,7 @@ class SerialPubSubNode(Node):
 
 
     # 8. Define the callback function for the timer
-    def stm_control_callback(self, msg):
+    def stm_control_callback(self,msg:STMControl):
         """
         Callback function for control commands.
         Sends the control data to the serial device.
@@ -115,7 +125,7 @@ class SerialPubSubNode(Node):
             # TODO: Format the control data as a comma-separated string and send it to the serial device
             # format: {control_type, goal_position, Kp, PWM}
             # control_type: 0 = Stop, 1 = Position Control (Close Loop), 2 = PWM Control (Open Loop)
-            control_data = f"{{{msg.data[0]}, {msg.data[1]}, {msg.data[2]}, {msg.data[3]}}}"
+            control_data = f"{{{msg.control_type}, {msg.setpoint}, {msg.kp}, {msg.pwm}}}"
 
             # TODO: Encode the control data as UTF-8 and write it to the serial port 
             self.serial_port.write((control_data+'\n').encode('utf-8'))
