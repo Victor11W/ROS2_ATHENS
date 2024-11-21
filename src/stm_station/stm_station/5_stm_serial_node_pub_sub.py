@@ -1,23 +1,24 @@
 # Objective:
 # The goal is to create a ROS 2 node that reads data from a serial device and publishes it using standard messages like Float32MultiArray.
-# The serial reading part is provided, and students will focus on setting up the publisher and formatting the data accordingly.
+# Additionally, the node subscribes to Float32MultiArray messages to receive control commands and sends these commands to the serial device.
+# The serial reading part is provided.
 
 # 1. Import necessary libraries
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray  # Standard message type for arrays
+from std_msgs.msg import Float32MultiArray
 import serial
 
-# 2. Define the SerialPublisherNode class
-class SerialPublisherNode(Node):
+# 2. Define the SerialPubSubNode class
+class SerialPubSubNode(Node):
     def __init__(self):
         """
-        Initialize the SerialPublisherNode with a publisher and serial interface.
+        Initialize the SerialPubSubNode with publishers, subscribers, and serial interface.
         """
         super().__init__('stm_serial_node')
 
         # 3. TODO: Get Serial Configuration Values 
-        self.port = '/dev/ttyACM0'  # Serial port name (j'ai modifié)
+        self.port = '/dev/ttyACM0'  # Serial port name
         self.baudrate = 115200      # Baud rate for serial communication
         self.loop_frequency = 1000  # Frequency to read data from the serial port
 
@@ -28,10 +29,16 @@ class SerialPublisherNode(Node):
         # 5. TODO: Create a publisher to publish the received data from the serial port
         # using Float32MultiArray messages from the std_msgs package in the topic '/stm_state'
         self.stm_state_topic = '/stm_state'
-        self.stm_state_publisher = '/stm_state/publisher'
+        self.stm_state_publisher = '/stm_state/publisher2'
 
         # 6. Create a timer to read data periodically and publish it
         self.timer = self.create_timer(1 / self.loop_frequency, self.timer_read_pub_callback)
+
+        # 7. TODO: Create a subscriber to receive control commands as Float32MultiArray messages
+        # on the topic '/stm_control' with a queue size of 10 and a callback function 'stm_control_callback'
+        self.stm_control_topic = '/stm_control'
+        self.stm_control_subscriber = '/stm_control/publisher'
+
 
     # 7. Define the callback function for the timer
     def timer_read_pub_callback(self):
@@ -61,7 +68,6 @@ class SerialPublisherNode(Node):
                 
                 # Split the data by commas
                 float_values = serial_data.split(',')
-
                 
                 if len(float_values) == 8:
                     # Ensure the correct number of data parts is present (expected 8 fields)
@@ -77,18 +83,38 @@ class SerialPublisherNode(Node):
                     # Create a Float32MultiArray message
                     # TODO: Create and populate the Float32MultiArray message
                     float32_multi_array_msg = Float32MultiArray()
-                    float32_multi_array_msg.data = [float(i) for i in float_values] #rajout
+                    float32_multi_array_msg.data = [float(i) for i in float_values]
 
                     # Publish the message
                     # TODO: Publish the float32_multi_array_msg
-                    self.publisher_=self.create_publisher(Float32MultiArray,'/stm_control/publisher',10)
+                    self.publisher_=self.create_publisher(Float32MultiArray,'topic_final',10)
                     self.publisher_.publish(float32_multi_array_msg) #rajout
+                    
 
                 self.get_logger().info(f'Published data: {float_values}')
             except ValueError as e:
                 self.get_logger().warn(f'Error parsing serial data: {e}')
-                
-    # 8. Define the destroy_node method
+
+
+    # 8. Define the callback function for the timer
+    def stm_control_callback(self, msg):
+        """
+        Callback function for control commands.
+        Sends the control data to the serial device.
+        """
+        try:
+            # TODO: Format the control data as a comma-separated string and send it to the serial device
+            # format: {control_type, goal_position, Kp, PWM}
+            # control_type: 0 = Stop, 1 = Position Control (Close Loop), 2 = PWM Control (Open Loop)
+            control_data = f"{{{1}, {msg.data[0]}, {5}, {0}}}"
+
+            # TODO: Encode the control data as UTF-8 and write it to the serial port 
+            self.serial_port.write(control_data.encode('utf-8'))
+            self.get_logger().info(f'Sent control command: {control_data}')
+        except Exception as e:
+            self.get_logger().error(f'Error sending control command: {e}')
+
+    # 9. Define the destroy_node method
     def destroy_node(self):
         """
         Clean up the node by closing the serial port.
@@ -98,7 +124,7 @@ class SerialPublisherNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SerialPublisherNode()
+    node = SerialPubSubNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

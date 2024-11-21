@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             '4_stm_serial_node_pub = stm_station.4_stm_serial_node_pub:main',
+            '5_stm_serial_node_pub_sub = stm_station.5_stm_serial_node_pub_sub:main'
         ],
     },
 )
