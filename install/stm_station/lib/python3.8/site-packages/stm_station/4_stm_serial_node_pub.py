@@ -81,7 +81,7 @@ class SerialPublisherNode(Node):
 
                     # Publish the message
                     # TODO: Publish the float32_multi_array_msg
-                    self.publisher_=self.create_publisher(Float32MultiArray,'/stm_control/publisher',10)
+                    self.publisher_=self.create_publisher(Float32MultiArray,'/stm_control',10)
                     self.publisher_.publish(float32_multi_array_msg) #rajout
 
                 self.get_logger().info(f'Published data: {float_values}')

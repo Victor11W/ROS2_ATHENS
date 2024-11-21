@@ -40,6 +40,15 @@ class SerialPubSubNode(Node):
         self.stm_control_subscriber = '/stm_control/publisher'
 
 
+        self.subscription = self.create_subscription(
+            Float32MultiArray,             # Message type used by the publisher
+            self.stm_control_topic,  # <-- Replace 'NICKNAME' with the specific topic name for your group
+            self.stm_control_callback,  
+            10)  # Queue size for incoming messages
+        self.subscription  # Prevent unused variable warning
+
+
+
     # 7. Define the callback function for the timer
     def timer_read_pub_callback(self):
         """
@@ -68,7 +77,6 @@ class SerialPubSubNode(Node):
                 
                 # Split the data by commas
                 float_values = serial_data.split(',')
-
                 
                 if len(float_values) == 8:
                     # Ensure the correct number of data parts is present (expected 8 fields)
@@ -88,7 +96,7 @@ class SerialPubSubNode(Node):
 
                     # Publish the message
                     # TODO: Publish the float32_multi_array_msg
-                    self.publisher_=self.create_publisher(Float32MultiArray,'topic_final',10)
+                    self.publisher_=self.create_publisher(Float32MultiArray,self.stm_state_topic,10)
                     self.publisher_.publish(float32_multi_array_msg) #rajout
                     
 
@@ -107,11 +115,12 @@ class SerialPubSubNode(Node):
             # TODO: Format the control data as a comma-separated string and send it to the serial device
             # format: {control_type, goal_position, Kp, PWM}
             # control_type: 0 = Stop, 1 = Position Control (Close Loop), 2 = PWM Control (Open Loop)
-            control_data = f"{{{1}, {msg.data[0]}, {5}, {0}}}"
+            control_data = f"{{{msg.data[0]}, {msg.data[1]}, {msg.data[2]}, {msg.data[3]}}}"
 
             # TODO: Encode the control data as UTF-8 and write it to the serial port 
-            self.serial_port.write(control_data.encode('utf-8'))
+            self.serial_port.write((control_data+'\n').encode('utf-8'))
             self.get_logger().info(f'Sent control command: {control_data}')
+            
         except Exception as e:
             self.get_logger().error(f'Error sending control command: {e}')
 
@@ -125,6 +134,7 @@ class SerialPubSubNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+    
     node = SerialPubSubNode()
     try:
         rclpy.spin(node)
