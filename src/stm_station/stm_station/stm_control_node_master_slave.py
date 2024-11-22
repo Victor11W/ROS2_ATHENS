@@ -39,20 +39,27 @@ class STMControlNode(Node):
 
         # 5. TODO: Define topic names for master and slave based on group IDs obtained from parameters
         self.master_state_topic = "/group_"+self.master_group_id+"/stm_state"# Master stm_state topic (/group_id/stm_state)
-        self.slave_control_topic = "/group_"+self.slave_group_id+"/stm_state"# Slave stm_control topic (/group_id/stm_control)
-
+        self.slave_control_topic = "/group_"+self.slave_group_id+"/stm_control"# Slave stm_control topic (/group_id/stm_control)
+        self.slave_state_topic = "/group_"+self.slave_group_id+"/stm_state"
+        
         # 6. TODO: Create subscribers for STM state (master and slave)
         self.master_stm_state_subscriber = self.create_subscription(
             STMState,
-            'stm_state',
+            self.master_state_topic,
             self.master_stm_state_callback,
         )  # Subscriber for the master node state
         self.get_logger().info(f"Subscribed to {self.master_state_topic}")
+        
+        self.slave_stm_state_subscriber = self.create_subscription(
+            STMState,
+            self.slave_state_topic,
+        )  # Subscriber for the master node state
+        self.get_logger().info(f"Subscribed to {self.slave_state_topic}")
 
         # 7. TODO: Create publishers for STM control (slave)
         self.slave_stm_control_publisher = self.create_publisher(
-            STMState,
-            'stm_state',
+            STMControl,
+            self.slave_control_topic,
             self.master_stm_state_callback,
         )  # Publisher for the slave node control
         self.get_logger().info(f"Publishing to {self.slave_control_topic}")
@@ -66,7 +73,7 @@ class STMControlNode(Node):
         # Response: Success status
         self.control_type_service = self.create_service(
             STMSetControlType, 
-            '.', 
+            self.control_type_service_name, 
             self.service_control_type_callback)
     
     
@@ -87,7 +94,7 @@ class STMControlNode(Node):
 
 
     # 14. TODO: Implement callback functions
-    def master_stm_state_callback(self, msg:STMControl):
+    def master_stm_state_callback(self, msg:STMState):
         """
         Callback activate when it is received data from the master STM state
         Updates master position.
@@ -95,7 +102,7 @@ class STMControlNode(Node):
         :param msg: STMState message containing motor position data.
         """
         # TODO: Update master_position with value from msg
-        self.master_position = msg.setpoint
+        self.master_position = msg.motor_encoder
 
     # 15. TODO: Implement the service callback
     def service_control_type_callback(self, request:STMSetControlType.Request, response:STMSetControlType.Response):
@@ -111,7 +118,7 @@ class STMControlNode(Node):
         # Set the control type to the requested value:
         # 0 = Stop, 1 = Position Control
         # If an invalid control type is requested, default to Stop (0)
-        if (request.control_type == 0 or request.control_type == 1):
+        if (request.control_type == 0 or request.control_type == 1): 
             self.control_type = request.control_type
         else:
             self.control_type = 0
