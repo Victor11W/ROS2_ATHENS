@@ -59,7 +59,6 @@ class SerialPubSubNode(Node):
             try:
                 # Read the data from the serial port 
                 serial_data_raw = self.serial_port.readline()
-                print(serial_data_raw)
                 # Decode the data
                 serial_data_decoded = serial_data_raw.decode('utf-8')
 
@@ -92,7 +91,6 @@ class SerialPubSubNode(Node):
                     # Create a Float32MultiArray message
                     # TODO: Create and populate the Float32MultiArray message
                     STM_state_msg = STMState()
-                    print(float_values)
                     STM_state_msg.motor_encoder = float(float_values[0])
                     STM_state_msg.motor_velocity = float(float_values[1])
                     STM_state_msg.accel_x = float(float_values[2])

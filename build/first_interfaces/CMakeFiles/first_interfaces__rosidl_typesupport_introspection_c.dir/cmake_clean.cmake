@@ -1,9 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/first_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/first_interfaces/msg/detail/example_message__type_support.c.o"
+  "CMakeFiles/first_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/first_interfaces/srv/detail/add_two_ints__type_support.c.o"
   "libfirst_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libfirst_interfaces__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/first_interfaces/msg/detail/example_message__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/first_interfaces/msg/detail/example_message__type_support.c"
+  "rosidl_typesupport_introspection_c/first_interfaces/srv/detail/add_two_ints__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/first_interfaces/srv/detail/add_two_ints__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

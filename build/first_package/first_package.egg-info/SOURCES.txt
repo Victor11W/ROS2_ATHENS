@@ -11,6 +11,8 @@ setup.py
 first_package/__init__.py
 first_package/simple_publisher.py
 first_package/simple_pubsub.py
+first_package/simple_service.py
+first_package/simple_service_parameter.py
 first_package/simple_subscriber.py
 first_package/test_simple_pubsub.py
 resource/first_package

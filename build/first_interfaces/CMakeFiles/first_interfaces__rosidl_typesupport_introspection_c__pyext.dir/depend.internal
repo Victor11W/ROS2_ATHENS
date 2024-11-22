@@ -101,3 +101,6 @@ CMakeFiles/first_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosid
  rosidl_generator_c/first_interfaces/msg/detail/example_message__struct.h
  rosidl_generator_c/first_interfaces/msg/detail/example_message__type_support.h
  rosidl_generator_c/first_interfaces/msg/rosidl_generator_c__visibility_control.h
+ rosidl_generator_c/first_interfaces/srv/detail/add_two_ints__functions.h
+ rosidl_generator_c/first_interfaces/srv/detail/add_two_ints__struct.h
+ rosidl_generator_c/first_interfaces/srv/detail/add_two_ints__type_support.h

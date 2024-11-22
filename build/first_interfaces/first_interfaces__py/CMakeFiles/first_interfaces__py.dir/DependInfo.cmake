@@ -10,6 +10,9 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/msg/__init__.py" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/msg/_example_message.py" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/msg/_example_message_s.c" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/srv/__init__.py" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/srv/_add_two_ints.py" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/srv/_add_two_ints_s.c" "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces/_first_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

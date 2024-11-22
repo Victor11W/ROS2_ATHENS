@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/first_interfaces__python.dir/rosidl_generator_py/first_interfaces/msg/_example_message_s.c.o"
+  "CMakeFiles/first_interfaces__python.dir/rosidl_generator_py/first_interfaces/srv/_add_two_ints_s.c.o"
   "rosidl_generator_py/first_interfaces/libfirst_interfaces__python.pdb"
   "rosidl_generator_py/first_interfaces/libfirst_interfaces__python.so"
 )

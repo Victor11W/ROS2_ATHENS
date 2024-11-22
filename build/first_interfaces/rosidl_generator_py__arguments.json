@@ -3,7 +3,8 @@
   "output_dir": "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_generator_py/first_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces:msg/ExampleMessage.idl"
+    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces:msg/ExampleMessage.idl",
+    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces:srv/AddTwoInts.idl"
   ],
   "target_dependencies": [
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
@@ -19,6 +20,7 @@
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces/msg/ExampleMessage.idl"
+    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces/msg/ExampleMessage.idl",
+    "/home/athens/ros2_athens_ws/build/first_interfaces/rosidl_adapter/first_interfaces/srv/AddTwoInts.idl"
   ]
 }
