@@ -67,6 +67,7 @@ rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_contr
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: /opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: rosidl_adapter/stm_interfaces/msg/STMControl.idl
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: rosidl_adapter/stm_interfaces/msg/STMState.idl
+rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: rosidl_adapter/stm_interfaces/srv/STMSetControlType.idl
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -111,6 +112,12 @@ rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state
 rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/stm_state__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/stm_state__rosidl_typesupport_fastrtps_cpp.hpp
 
+rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp
+
+rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/stm_set_control_type__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/stm_set_control_type__rosidl_typesupport_fastrtps_cpp.hpp
+
 CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp.o: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
 CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp.o"
@@ -137,16 +144,31 @@ CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp -o CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp.s
 
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/flags.make
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o -c /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp
+
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp > CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.i
+
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp -o CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.s
+
 # Object files for target stm_interfaces__rosidl_typesupport_fastrtps_cpp
 stm_interfaces__rosidl_typesupport_fastrtps_cpp_OBJECTS = \
 "CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp.o" \
-"CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp.o"
+"CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp.o" \
+"CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o"
 
 # External object files for target stm_interfaces__rosidl_typesupport_fastrtps_cpp
 stm_interfaces__rosidl_typesupport_fastrtps_cpp_EXTERNAL_OBJECTS =
 
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_control__type_support.cpp.o
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp.o
+libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp.o
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librmw.so
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: /opt/ros/foxy/lib/librosidl_typesupport_fastrtps_cpp.so
@@ -177,7 +199,7 @@ libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/x86_64-linux-gnu
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/x86_64-linux-gnu/libssl.so
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so: CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libstm_interfaces__rosidl_typesupport_fastrtps_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -193,6 +215,8 @@ CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_ty
 CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/stm_control__rosidl_typesupport_fastrtps_cpp.hpp
 CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/dds_fastrtps/stm_state__type_support.cpp
 CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/stm_interfaces/msg/detail/stm_state__rosidl_typesupport_fastrtps_cpp.hpp
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/dds_fastrtps/stm_set_control_type__type_support.cpp
+CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend: rosidl_typesupport_fastrtps_cpp/stm_interfaces/srv/detail/stm_set_control_type__rosidl_typesupport_fastrtps_cpp.hpp
 	cd /home/athens/ros2_athens_ws/build/stm_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/athens/ros2_athens_ws/src/stm_interfaces /home/athens/ros2_athens_ws/src/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/depend
 

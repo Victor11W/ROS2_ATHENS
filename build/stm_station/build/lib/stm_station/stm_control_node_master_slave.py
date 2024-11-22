@@ -15,7 +15,7 @@ from rclpy.node import Node
 # TODO: Import the custom message types STMState and STMControl
 from stm_interfaces.msg import STMControl, STMState
 # TODO: Import the custom service type STMSetControlType
-from stm_interfaces.msg import STMSetControlType
+from stm_interfaces.srv import STMSetControlType
 # 2. Define the STMControlNode class
 class STMControlNode(Node):
     def __init__(self):
@@ -28,25 +28,40 @@ class STMControlNode(Node):
         # 3. TODO:  Declare parameters 'master_group_id' and 'slave_group_id as set default values
         # 'master_group_id': ID for the master STM data topic, set the default value to 1
         # 'slave_group_id': ID for the slave control command topic, set the default value to 2
-        self.declare_parameter('master_group_id', ...) 
-        self.declare_parameter('slave_group_id', ...) 
+        self.declare_parameter('master_group_id', 1) 
+        self.declare_parameter('slave_group_id', 2) 
         self.loop_frequency = 50  # Maintain value
 
         # 4. TODO: Retrieve parameter values from the node's configuration and assign them to instance 
         # variables
-        self.master_group_id = ...  
-        self.slave_group_id = ... 
+        self.master_group_id = self.get_parameter('master_group_id').get_parameter_value().integer_value  
+        self.slave_group_id = self.get_parameter('slave_group_id').get_parameter_value().integer_value
 
         # 5. TODO: Define topic names for master and slave based on group IDs obtained from parameters
-        self.master_state_topic = ...  # Master stm_state topic (/group_id/stm_state)
-        self.slave_control_topic = ... # Slave stm_control topic (/group_id/stm_control)
-
+        self.master_state_topic = "/group_"+self.master_group_id+"/stm_state"# Master stm_state topic (/group_id/stm_state)
+        self.slave_control_topic = "/group_"+self.slave_group_id+"/stm_control"# Slave stm_control topic (/group_id/stm_control)
+        self.slave_state_topic = "/group_"+self.slave_group_id+"/stm_state"
+        
         # 6. TODO: Create subscribers for STM state (master and slave)
-        self.master_stm_state_subscriber = ...  # Subscriber for the master node state
+        self.master_stm_state_subscriber = self.create_subscription(
+            STMState,
+            self.master_state_topic,
+            self.master_stm_state_callback,
+        )  # Subscriber for the master node state
         self.get_logger().info(f"Subscribed to {self.master_state_topic}")
+        
+        self.slave_stm_state_subscriber = self.create_subscription(
+            STMState,
+            self.slave_state_topic,
+        )  # Subscriber for the master node state
+        self.get_logger().info(f"Subscribed to {self.slave_state_topic}")
 
         # 7. TODO: Create publishers for STM control (slave)
-        self.slave_stm_control_publisher = ...  # Publisher for the slave node control
+        self.slave_stm_control_publisher = self.create_publisher(
+            STMControl,
+            self.slave_control_topic,
+            self.master_stm_state_callback,
+        )  # Publisher for the slave node control
         self.get_logger().info(f"Publishing to {self.slave_control_topic}")
 
         # 8. Define the service name ('set_control_type')
@@ -56,10 +71,15 @@ class STMControlNode(Node):
         # Request:  Control types ->  0 = Stop  |  1 = Position Control
         # Request:  Control gains -> kp = Proportional gain, kd = Derivative gain
         # Response: Success status
-        self.control_type_service = ...
-
+        self.control_type_service = self.create_service(
+            STMSetControlType, 
+            self.control_type_service_name, 
+            self.service_control_type_callback)
+    
+    
         # 10. TODO: Create a timer for the publisher and to control the STM. 
-        self.timer_control_loop = ...
+        self.timer_control_loop =  self.create_timer(1/self.loop_frequency, self.timer_callback)
+
 
         # 11. Initialize variables for storing master position
         self.master_position = 0.0
@@ -74,7 +94,7 @@ class STMControlNode(Node):
 
 
     # 14. TODO: Implement callback functions
-    def master_stm_state_callback(self, msg):
+    def master_stm_state_callback(self, msg:STMState):
         """
         Callback activate when it is received data from the master STM state
         Updates master position.
@@ -82,10 +102,10 @@ class STMControlNode(Node):
         :param msg: STMState message containing motor position data.
         """
         # TODO: Update master_position with value from msg
-        self.master_position = ...
+        self.master_position = msg.motor_encoder
 
     # 15. TODO: Implement the service callback
-    def service_control_type_callback(self, request, response):
+    def service_control_type_callback(self, request:STMSetControlType.Request, response:STMSetControlType.Response):
         """
         Service callback to set the control type.
         Updates the control_type based on the request and confirms success in the response.
@@ -98,8 +118,8 @@ class STMControlNode(Node):
         # Set the control type to the requested value:
         # 0 = Stop, 1 = Position Control
         # If an invalid control type is requested, default to Stop (0)
-        if (request.control_type == 0 or request.control_type == 1):
-            self.control_type = request...
+        if (request.control_type == 0 or request.control_type == 1): 
+            self.control_type = request.control_type
         else:
             self.control_type = 0
             self.get_logger().warning(f"Invalid control type: {request.control_type}. Defaulting to Stop (0)")
@@ -107,7 +127,7 @@ class STMControlNode(Node):
         # TODO: Update control gain based on the received requested message, 
         # ensure the value is non-negative
         if request.kp >= 0.0:
-            self.kp = request...
+            self.kp = request.kp
         else:
             self.kp = 0.0
             self.get_logger().warning(f"Invalid control gain: kp={request.kp}. Defaulting to kp={self.kp}")
@@ -132,9 +152,9 @@ class STMControlNode(Node):
         if (self.control_type == 1 or self.control_type == 0):
             # TODO: Fill in the control message based on the control type and control constant received from the service request
             # and the slave setpoint position based on the master position received from the subscriber
-            control_msg.control_type = ... 
-            control_msg.kp = ...
-            control_msg.position_setpoint = ...
+            control_msg.control_type = self.control_type
+            control_msg.kp = self.kp
+            control_msg.position_setpoint = self.master_position
         else:
             # Handle unknown control types
             self.get_logger().warning(f"Unknown control type: {self.control_type}")

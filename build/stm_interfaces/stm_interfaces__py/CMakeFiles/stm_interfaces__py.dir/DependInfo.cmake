@@ -12,6 +12,9 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/msg/_stm_state.py" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/srv/__init__.py" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c" "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

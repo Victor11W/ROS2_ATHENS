@@ -24,7 +24,7 @@ find_package(rosidl_default_generators REQUIRED)
 set(msg_files 
   "msg/STMControl.msg" 
   "msg/STMState.msg"
-  "msg/STMSetControlType.msg"
+  "srv/STMSetControlType.srv"
   )
 # Generate the messages:
 

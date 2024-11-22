@@ -72,6 +72,7 @@ rosidl_generator_c/stm_interfaces/msg/stm_control.h: /opt/ros/foxy/share/rosidl_
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: /opt/ros/foxy/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: rosidl_adapter/stm_interfaces/msg/STMControl.idl
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: rosidl_adapter/stm_interfaces/msg/STMState.idl
+rosidl_generator_c/stm_interfaces/msg/stm_control.h: rosidl_adapter/stm_interfaces/srv/STMSetControlType.idl
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/stm_interfaces/msg/stm_control.h: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -128,11 +129,26 @@ rosidl_generator_c/stm_interfaces/msg/detail/stm_state__struct.h: rosidl_generat
 rosidl_generator_c/stm_interfaces/msg/detail/stm_state__type_support.h: rosidl_generator_c/stm_interfaces/msg/stm_control.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/msg/detail/stm_state__type_support.h
 
+rosidl_generator_c/stm_interfaces/srv/stm_set_control_type.h: rosidl_generator_c/stm_interfaces/msg/stm_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/srv/stm_set_control_type.h
+
+rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.h: rosidl_generator_c/stm_interfaces/msg/stm_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.h
+
+rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__struct.h: rosidl_generator_c/stm_interfaces/msg/stm_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__struct.h
+
+rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__type_support.h: rosidl_generator_c/stm_interfaces/msg/stm_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__type_support.h
+
 rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c: rosidl_generator_c/stm_interfaces/msg/stm_control.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c
 
 rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c: rosidl_generator_c/stm_interfaces/msg/stm_control.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c
+
+rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c: rosidl_generator_c/stm_interfaces/msg/stm_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c
 
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c.o: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c.o: rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c
@@ -160,16 +176,31 @@ CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c -o CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c.s
 
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o: rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o   -c /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c
+
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c > CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.i
+
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c -o CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.s
+
 # Object files for target stm_interfaces__rosidl_generator_c
 stm_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c.o" \
-"CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c.o"
+"CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c.o" \
+"CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o"
 
 # External object files for target stm_interfaces__rosidl_generator_c
 stm_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libstm_interfaces__rosidl_generator_c.so: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c.o
 libstm_interfaces__rosidl_generator_c.so: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c.o
+libstm_interfaces__rosidl_generator_c.so: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c.o
 libstm_interfaces__rosidl_generator_c.so: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/build.make
 libstm_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 libstm_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -189,7 +220,7 @@ libstm_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.
 libstm_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libstm_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libstm_interfaces__rosidl_generator_c.so: CMakeFiles/stm_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libstm_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libstm_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stm_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -209,8 +240,13 @@ CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.h
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/msg/detail/stm_state__struct.h
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/msg/detail/stm_state__type_support.h
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/srv/stm_set_control_type.h
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.h
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__struct.h
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__type_support.h
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/msg/detail/stm_control__functions.c
 CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/msg/detail/stm_state__functions.c
+CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/stm_interfaces/srv/detail/stm_set_control_type__functions.c
 	cd /home/athens/ros2_athens_ws/build/stm_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/athens/ros2_athens_ws/src/stm_interfaces /home/athens/ros2_athens_ws/src/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces /home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles/stm_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stm_interfaces__rosidl_generator_c.dir/depend
 

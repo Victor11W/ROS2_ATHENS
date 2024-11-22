@@ -55,6 +55,9 @@ include CMakeFiles/stm_interfaces.dir/progress.make
 
 CMakeFiles/stm_interfaces: /home/athens/ros2_athens_ws/src/stm_interfaces/msg/STMControl.msg
 CMakeFiles/stm_interfaces: /home/athens/ros2_athens_ws/src/stm_interfaces/msg/STMState.msg
+CMakeFiles/stm_interfaces: /home/athens/ros2_athens_ws/src/stm_interfaces/srv/STMSetControlType.srv
+CMakeFiles/stm_interfaces: rosidl_cmake/srv/STMSetControlType_Request.msg
+CMakeFiles/stm_interfaces: rosidl_cmake/srv/STMSetControlType_Response.msg
 CMakeFiles/stm_interfaces: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 CMakeFiles/stm_interfaces: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 CMakeFiles/stm_interfaces: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl

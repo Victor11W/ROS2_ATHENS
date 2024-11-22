@@ -4,7 +4,8 @@
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
     "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces:msg/STMControl.idl",
-    "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces:msg/STMState.idl"
+    "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces:msg/STMState.idl",
+    "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces:srv/STMSetControlType.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
@@ -56,6 +57,7 @@
     "/opt/ros/foxy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces/msg/STMControl.idl",
     "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces/msg/STMState.idl",
+    "/home/athens/ros2_athens_ws/build/stm_interfaces/rosidl_adapter/stm_interfaces/srv/STMSetControlType.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Byte.idl",
     "/opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl",

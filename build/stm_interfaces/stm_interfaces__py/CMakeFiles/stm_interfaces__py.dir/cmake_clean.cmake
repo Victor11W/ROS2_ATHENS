@@ -7,6 +7,9 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c"
   "../rosidl_generator_py/stm_interfaces/msg/_stm_state.py"
   "../rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c"
+  "../rosidl_generator_py/stm_interfaces/srv/__init__.py"
+  "../rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py"
+  "../rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c"
   "CMakeFiles/stm_interfaces__py"
 )
 

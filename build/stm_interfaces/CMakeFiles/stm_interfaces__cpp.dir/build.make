@@ -63,6 +63,11 @@ CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/s
 CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__struct.hpp
 CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__traits.hpp
 CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__type_support.hpp
+CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/stm_set_control_type.hpp
+CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__builder.hpp
+CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__struct.hpp
+CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__traits.hpp
+CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__type_support.hpp
 CMakeFiles/stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 
@@ -87,6 +92,7 @@ rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: /opt/ros/foxy/share/ros
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: /opt/ros/foxy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: rosidl_adapter/stm_interfaces/msg/STMControl.idl
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: rosidl_adapter/stm_interfaces/msg/STMState.idl
+rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: rosidl_adapter/stm_interfaces/srv/STMSetControlType.idl
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -149,6 +155,21 @@ rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__traits.hpp: rosidl_gen
 rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__type_support.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__type_support.hpp
 
+rosidl_generator_cpp/stm_interfaces/srv/stm_set_control_type.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/srv/stm_set_control_type.hpp
+
+rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__builder.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__builder.hpp
+
+rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__struct.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__struct.hpp
+
+rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__traits.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__traits.hpp
+
+rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__type_support.hpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__type_support.hpp
+
 stm_interfaces__cpp: CMakeFiles/stm_interfaces__cpp
 stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/stm_control.hpp
 stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_control__builder.hpp
@@ -160,6 +181,11 @@ stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__b
 stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__struct.hpp
 stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__traits.hpp
 stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/msg/detail/stm_state__type_support.hpp
+stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/stm_set_control_type.hpp
+stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__builder.hpp
+stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__struct.hpp
+stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__traits.hpp
+stm_interfaces__cpp: rosidl_generator_cpp/stm_interfaces/srv/detail/stm_set_control_type__type_support.hpp
 stm_interfaces__cpp: CMakeFiles/stm_interfaces__cpp.dir/build.make
 
 .PHONY : stm_interfaces__cpp

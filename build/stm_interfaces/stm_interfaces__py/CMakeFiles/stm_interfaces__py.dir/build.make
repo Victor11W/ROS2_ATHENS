@@ -58,9 +58,12 @@ stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interf
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_c.c
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_control.py
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_state.py
+stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/__init__.py
+stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/__init__.py
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c
 stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c
+stm_interfaces__py/CMakeFiles/stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c
 
 
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
@@ -78,6 +81,7 @@ rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastr
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/stm_interfaces/msg/STMControl.idl
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/stm_interfaces/msg/STMState.idl
+rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/stm_interfaces/srv/STMSetControlType.idl
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -125,8 +129,14 @@ rosidl_generator_py/stm_interfaces/msg/_stm_control.py: rosidl_generator_py/stm_
 rosidl_generator_py/stm_interfaces/msg/_stm_state.py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/msg/_stm_state.py
 
+rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py
+
 rosidl_generator_py/stm_interfaces/msg/__init__.py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/msg/__init__.py
+
+rosidl_generator_py/stm_interfaces/srv/__init__.py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/srv/__init__.py
 
 rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c
@@ -134,15 +144,21 @@ rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c: rosidl_generator_py/stm
 rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c
 
+rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c
+
 stm_interfaces__py: stm_interfaces__py/CMakeFiles/stm_interfaces__py
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/_stm_interfaces_s.ep.rosidl_typesupport_c.c
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_control.py
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_state.py
+stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type.py
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/__init__.py
+stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/__init__.py
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_control_s.c
 stm_interfaces__py: rosidl_generator_py/stm_interfaces/msg/_stm_state_s.c
+stm_interfaces__py: rosidl_generator_py/stm_interfaces/srv/_stm_set_control_type_s.c
 stm_interfaces__py: stm_interfaces__py/CMakeFiles/stm_interfaces__py.dir/build.make
 
 .PHONY : stm_interfaces__py
