@@ -26,7 +26,7 @@ setup(
         'console_scripts': [
             '4_stm_serial_node_pub = stm_station.4_stm_serial_node_pub:main',
             'stm_serial_node_pub_sub = stm_station.stm_serial_node_pub_sub:main',
-            'stm_serial_node_master_slave = stm_station.stm_serial_node_master_slave:main'
+            'stm_control_node_master_slave = stm_station.stm_control_node_master_slave:main'
         ],
     },
 )

@@ -38,21 +38,24 @@ class STMControlNode(Node):
         self.slave_group_id = self.get_parameter('slave_group_id').get_parameter_value().integer_value
 
         # 5. TODO: Define topic names for master and slave based on group IDs obtained from parameters
-        self.master_state_topic = "/group_"+self.master_group_id+"/stm_state"# Master stm_state topic (/group_id/stm_state)
-        self.slave_control_topic = "/group_"+self.slave_group_id+"/stm_control"# Slave stm_control topic (/group_id/stm_control)
-        self.slave_state_topic = "/group_"+self.slave_group_id+"/stm_state"
+        self.master_state_topic = "/group_"+str(self.master_group_id)+"/stm_state"# Master stm_state topic (/group_id/stm_state)
+        self.slave_control_topic = "/group_"+str(self.slave_group_id)+"/stm_control"# Slave stm_control topic (/group_id/stm_control)
+        self.slave_state_topic = "/group_"+str(self.slave_group_id)+"/stm_state"
         
         # 6. TODO: Create subscribers for STM state (master and slave)
         self.master_stm_state_subscriber = self.create_subscription(
             STMState,
             self.master_state_topic,
             self.master_stm_state_callback,
+            10
         )  # Subscriber for the master node state
         self.get_logger().info(f"Subscribed to {self.master_state_topic}")
         
         self.slave_stm_state_subscriber = self.create_subscription(
             STMState,
             self.slave_state_topic,
+            self.slave_state_listener_callback,
+            10
         )  # Subscriber for the master node state
         self.get_logger().info(f"Subscribed to {self.slave_state_topic}")
 
@@ -60,7 +63,7 @@ class STMControlNode(Node):
         self.slave_stm_control_publisher = self.create_publisher(
             STMControl,
             self.slave_control_topic,
-            self.master_stm_state_callback,
+            10,
         )  # Publisher for the slave node control
         self.get_logger().info(f"Publishing to {self.slave_control_topic}")
 
@@ -92,6 +95,8 @@ class STMControlNode(Node):
         # 13. Initialize control gain kp to default value
         self.kp = 1.0
 
+    def slave_state_listener_callback(self,msg):
+        self.get_logger().info(f'Received:"{msg}"')
 
     # 14. TODO: Implement callback functions
     def master_stm_state_callback(self, msg:STMState):
@@ -154,14 +159,14 @@ class STMControlNode(Node):
             # and the slave setpoint position based on the master position received from the subscriber
             control_msg.control_type = self.control_type
             control_msg.kp = self.kp
-            control_msg.position_setpoint = self.master_position
+            control_msg.setpoint = self.master_position
         else:
             # Handle unknown control types
             self.get_logger().warning(f"Unknown control type: {self.control_type}")
             # TODO: Default to stop mode
             control_msg.control_type = 0
             control_msg.kp = 0.0
-            control_msg.position_setpoint = 0.0
+            control_msg.setpoint = 0.0
         
         # Publish the constructed control command
         # TODO: Publish the control message
