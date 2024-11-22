@@ -2,7 +2,7 @@ from launch import LaunchDescription  # Import LaunchDescription to define what 
 from launch_ros.actions import Node  # Import Node to define individual ROS nodes to launch
  
 # TODO: Use a variable to define the namespace
-stm_name_space = 'group_4'
+stm_name_space = 'group_1'
  
 def generate_launch_description():
     """
@@ -11,10 +11,10 @@ def generate_launch_description():
     """
  
     # TODO: Parameters are defined here  
-    # parameters = {
-    #     'parameter1': 2,    
-    #     'parameter2': 1,     
-    # }
+    parameters = {
+         'parameter1': 2,    
+         'parameter2': 1,     
+     }
  
     # Return a LaunchDescription containing the nodes to launch
     return LaunchDescription([
@@ -23,8 +23,16 @@ def generate_launch_description():
             package='stm_station',                  # ROS package containing the node's executable
             executable='stm_serial_node_pub_sub',           # Name of the executable to run
             name='stm_serial_node_pub_sub',                 # Name to assign to the node (used in logs and debugging)
-            # TODO: namespace= stm_name_space,      # Namespace to group the node under
-            # TODO: parameters=[parameters],        # Inline parameters passed to the node
+            namespace= stm_name_space,      # Namespace to group the node under
+            #parameters=[parameters],        # Inline parameters passed to the node
             output='screen'                             # Specify where to send the node's output (console or log file)
-        )
+        ),
+        Node(
+            package='stm_station',                  # ROS package containing the node's executable
+            executable='stm_control_node_master_slave',           # Name of the executable to run
+            name='stm_control_node_master_slave',                 # Name to assign to the node (used in logs and debugging)
+            #namespace= stm_name_space,      # Namespace to group the node under
+            #parameters=[parameters],        # Inline parameters passed to the node
+            output='screen'                             # Specify where to send the node's output (console or log file)
+        ),
     ])

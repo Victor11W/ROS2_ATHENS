@@ -29,7 +29,7 @@ class SerialPubSubNode(Node):
 
         # 5. TODO: Create a publisher to publish the received data from the serial port
         # using Float32MultiArray messages from the std_msgs package in the topic '/stm_state'
-        self.stm_state_topic = '/stm_state'
+        self.stm_state_topic = '/group_1/stm_state'
         self.stm_state_publisher = self.create_publisher(
             STMState, 
             self.stm_state_topic, 

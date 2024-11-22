@@ -90,13 +90,14 @@ class STMControlNode(Node):
 
         # 12. Initialize control type to 'Stop' (0), allowing dynamic changes via a service
         # Control types: 0 = Stop, 1 = Position Control
-        self.control_type = 0
+        self.control_type = 1
 
         # 13. Initialize control gain kp to default value
         self.kp = 1.0
 
     def slave_state_listener_callback(self,msg):
-        self.get_logger().info(f'Received:"{msg}"')
+    #    self.get_logger().info(f'Received:"{msg}"')
+        return
 
     # 14. TODO: Implement callback functions
     def master_stm_state_callback(self, msg:STMState):

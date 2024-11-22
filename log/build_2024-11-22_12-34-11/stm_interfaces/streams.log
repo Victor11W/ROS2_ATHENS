@@ -1,0 +1,21 @@
+[0.083s] Invoking command in '/home/athens/ros2_athens_ws/build/stm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/athens/ros2_athens_ws/install/stm_station:/home/athens/ros2_athens_ws/install/first_package:/opt/ros/foxy /usr/bin/cmake --build /home/athens/ros2_athens_ws/build/stm_interfaces -- -j4 -l4
+[0.142s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.177s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.177s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.512s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.551s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.557s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.799s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.870s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.887s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.888s]   rosidl_generate_interfaces() the passed file 'msg/STMSetControlType.msg'
+[0.890s]   doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.891s]   '/home/athens/ros2_athens_ws/src/stm_interfaces'
+[0.891s] Call Stack (most recent call first):
+[0.892s]   CMakeLists.txt:31 (rosidl_generate_interfaces)
+[0.892s] 
+[0.893s] 
+[0.894s] -- Configuring incomplete, errors occurred!
+[0.894s] See also "/home/athens/ros2_athens_ws/build/stm_interfaces/CMakeFiles/CMakeOutput.log".
+[0.901s] make: *** [Makefile:988: cmake_check_build_system] Error 1
+[0.907s] Invoked command in '/home/athens/ros2_athens_ws/build/stm_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/athens/ros2_athens_ws/install/stm_station:/home/athens/ros2_athens_ws/install/first_package:/opt/ros/foxy /usr/bin/cmake --build /home/athens/ros2_athens_ws/build/stm_interfaces -- -j4 -l4
