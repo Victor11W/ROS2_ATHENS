@@ -35,7 +35,7 @@ class SerialPubSubNode(Node):
             self.stm_state_topic, 
             10)
         # 6. Create a timer to read data periodically and publish it
-        self.timer = self.create_timer(1, self.timer_read_pub_callback)
+        self.timer = self.create_timer(1/self.loop_frequency, self.timer_read_pub_callback)
 
         # 7. TODO: Create a subscriber to receive control commands as Float32MultiArray messages
         # on the topic '/stm_control' with a queue size of 10 and a callback function 'stm_control_callback'
@@ -59,7 +59,7 @@ class SerialPubSubNode(Node):
             try:
                 # Read the data from the serial port 
                 serial_data_raw = self.serial_port.readline()
-
+                print(serial_data_raw)
                 # Decode the data
                 serial_data_decoded = serial_data_raw.decode('utf-8')
 
@@ -92,6 +92,7 @@ class SerialPubSubNode(Node):
                     # Create a Float32MultiArray message
                     # TODO: Create and populate the Float32MultiArray message
                     STM_state_msg = STMState()
+                    print(float_values)
                     STM_state_msg.motor_encoder = float(float_values[0])
                     STM_state_msg.motor_velocity = float(float_values[1])
                     STM_state_msg.accel_x = float(float_values[2])
