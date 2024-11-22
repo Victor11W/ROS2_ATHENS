@@ -1,0 +1,5 @@
+  File "/home/athens/ros2_athens_ws/install/stm_station/lib/python3.8/site-packages/stm_station/stm_control_node_master_slave.py", line 102
+    self.control_type = request...
+                               ^
+SyntaxError: invalid syntax
+

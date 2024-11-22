@@ -13,7 +13,7 @@ class AddTwoIntsServer(Node):
         super().__init__('add_two_ints_server')
         
         # 3. Declare the parameter 'extra_term' with a default value of 10
-        self.declare_parameter('extra_term')
+        self.declare_parameter('extra_term', 10)
         self.extra_term = self.get_parameter('extra_term').get_parameter_value().integer_value
         
         # 4. Create the service

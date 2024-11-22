@@ -12,6 +12,7 @@ launch/stm_station_launch.py
 resource/stm_station
 stm_station/4_stm_serial_node_pub.py
 stm_station/__init__.py
+stm_station/stm_control_node_master_slave.py
 stm_station/stm_serial_node_pub_sub.py
 test/test_copyright.py
 test/test_flake8.py
